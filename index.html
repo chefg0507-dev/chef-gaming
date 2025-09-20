@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download File</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #0f172a, #1e293b);
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 26px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .step {
+      display: none;
+      margin-top: 40px;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    .active {
+      display: block;
+    }
+
+    button {
+      padding: 14px 28px;
+      margin-top: 20px;
+      font-size: 18px;
+      background: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0px 4px 10px rgba(59,130,246,0.4);
+    }
+
+    button:hover {
+      background: #2563eb;
+      transform: scale(1.05);
+    }
+
+    a button {
+      background: #22c55e;
+      box-shadow: 0px 4px 10px rgba(34,197,94,0.4);
+    }
+
+    a button:hover {
+      background: #16a34a;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎯 Ikuti 3 Langkah Untuk Mendapatkan Link Download</h1>
+
+  <!-- Langkah 1 -->
+  <div class="step active" id="step1">
+    <p>1️⃣ Klik tombol di bawah untuk <b>Subscribe</b> channel kami:</p>
+    <button onclick="nextStep(1)">📺 Subscribe</button>
+  </div>
+
+  <!-- Langkah 2 -->
+  <div class="step" id="step2">
+    <p>2️⃣ Setelah subscribe, klik tombol untuk <b>Like</b> video:</p>
+    <button onclick="nextStep(2)">👍 Like Video</button>
+  </div>
+
+  <!-- Langkah 3 -->
+  <div class="step" id="step3">
+    <p>3️⃣ Tinggalkan komentar di video, lalu klik tombol di bawah:</p>
+    <button onclick="nextStep(3)">💬 Saya Sudah Komentar</button>
+  </div>
+
+  <!-- Link Download -->
+  <div class="step" id="step4">
+    <p>✅ Terima kasih! Klik tombol di bawah untuk mendownload file:</p>
+    <a href="https://www.mediafire.com/file/34i6eit009eabmv/CarxStreet%252BLibtool1.1.0.ChefG.apk/file" target="_blank">
+      <button>⬇️ Download Sekarang</button>
+    </a>
+  </div>
+
+  <script>
+    function nextStep(step) {
+      document.getElementById(`step${step}`).classList.remove("active");
+      
+      // Arahkan user sesuai langkah
+      if (step === 1) {
+        window.open("https://www.youtube.com/@Chef_Gaming98");
+      }
+      if (step === 2) {
+        window.open("https://youtu.be/HLeqVZ1Ahqo?si=f8wzsNT0xxdde5mw");
+      }
+      
+      document.getElementById(`step${step+1}`).classList.add("active");
+    }
+  </script>
+
+</body>
+</html>
